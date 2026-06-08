@@ -1,2 +1,157 @@
-<h1>HQ GmbH – Technische Dokumentation</h1>
-<p>Hier entsteht in Kürze unsere Wissensdatenbank.</p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Standards & Technische Dokumentation | HQ GmbH</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        header p {
+            margin: 0.5rem 0 0 0;
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+        .intro-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .intro-box p {
+            margin: 0;
+            font-weight: 500;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .grid { grid-template-columns: 1fr 1fr; }
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HQ GmbH – Engineering Hub</h1>
+        <p>Technische Dokumentation, Best Practices & Coding-Standards</p>
+    </header>
+
+    <main>
+        <div class="intro-box">
+            <p>Hinweis zur Datensicherheit: Unsere produktiven Repositories, DevOps-Pipelines und kundenspezifischen Quellcodes werden aus Gründen der IT-Sicherheit und des IP-Schutzes ausschließlich auf unseren eigenen, lokalen Git-Servern betrieben. Auf dieser Plattform dokumentieren wir allgemeingültige technische Standards und Workflows unserer Agentur.</p>
+        </div>
+
+        <section>
+            <h2>1. E-Commerce Architektur & Skalierung</h2>
+            <p>Die Entwicklung stabiler B2B- und B2C-Systeme erfordert eine strikte Trennung von Core-Logik, Präsentationsschicht und Drittsystemen (ERP/CRM). Unser Engineering-Team arbeitet nach dem "API-First"-Prinzip, um langfristige Wartbarkeit und Updatesicherheit zu garantieren.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Code-Audits bei Systemübernahmen</h3>
+                    <p>Bei der Übernahme von unvollständig dokumentierten oder fehlerhaften Fremdsystemen setzen wir auf strukturierte Refactoring-Prozesse. Unser technischer Leitfaden definiert die Risikominimierung und Datenmigration bei einem reibungslosen <a href="https://www.hqgmbh.de/e-commerce-tipps/shopware-agenturwechsel/">Shopware Agenturwechsel</a>.</p>
+                </div>
+                <div class="card">
+                    <h3>High-Performance & Caching</h3>
+                    <p>Millisekunden entscheiden im Enterprise-Commerce über die Conversion-Rate. Wir optimieren Datenstrukturen, reduzieren API-Overhead und implementieren maßgeschneiderte HTTP-Cache-Strategien im Rahmen unserer <a href="https://www.hqgmbh.de/e-commerce-tipps/shopware-6-performance-optimierung/">Shopware Performance Optimierung</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. DevOps & Infrastruktur-Standards</h2>
+            <p>Ein stabiler Shop nützt nichts ohne eine krisenfeste Umgebung. Unsere Systeme werden für den gehobenen Mittelstand entwickelt und betrieben.</p>
+            <ul>
+                <li><strong>CI/CD Pipelines:</strong> Automatisierte Unit- und Integration-Tests vor jedem Live-Deployment zur Vermeidung von Regressionen.</li>
+                <li><strong>Containerisierung:</strong> Standardisierte Docker- und Kubernetes-Umgebungen für identische Bedingungen zwischen Local Dev, Staging und Production.</li>
+                <li><strong>Infrastruktur-Monitoring:</strong> Automatisiertes Alerting und proaktives Ressourcen-Management gekoppelt mit unserem internen <a href="https://www.hqgmbh.de/shopware-wartungsvertraege-notfallsupport-und-beratung/">24/7/365 Notfallservice</a>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Coding Guidelines (Kurzübersicht)</h2>
+            <p>Unser Team verpflichtet sich zu sauberem, lesbarem und testbarem Code:</p>
+            <ul>
+                <li><strong>PHP:</strong> Konsequente Einhaltung von PSR-12, strikte Typisierung (Strict Types) und Vermeidung von Legacy-Sünden.</li>
+                <li><strong>Frontend:</strong> Komponentengestützte Entwicklung, strikte Trennung von Logik und Design, Barrierefreiheit (WCAG) und Core Web Vitals im Fokus.</li>
+                <li><strong>Schnittstellen:</strong> JSON:API oder GraphQL-Standards für performanten Datenaustausch mit führenden ERP-Systemen.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; HQ GmbH. Alle Rechte vorbehalten. | <a href="https://www.hqgmbh.de/">Zur Haupt-Website (hqgmbh.de)</a></p>
+    </footer>
+
+</body>
+</html>
